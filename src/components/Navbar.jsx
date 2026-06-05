@@ -1,30 +1,34 @@
 import React from 'react';
-import Button from './Ui/Button';
-import { ChevronRight } from "lucide-react";
-const Navbar = ()=>{
-   return (
-       <nav className='w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between'>
-        {/* logo */}
-        <div className=' flex items-center gap-2 text-white text-xl font-bold cursor-pointer'>
-            <div className='w-6 h-6 bg-linear-to-br from-amber-200 to-purple-500 rounded-md flex items-center justify-center'>
-              <div className="w-2 h-2 bg-slate-950 rounded-xs" />
-            </div>
-            Marketeam 
-        </div>
-        {/* nav links */}
-        <div className="hidden md:flex items-center gap-8 text-sm text-slate-400 font-medium">
-             <a href="#team" className="hover:text-white transition-colors">Your Team</a>
-             <a href="#solutions" className="hover:text-white transition-colors">Solutions</a>
-             <a href="#blog" className="hover:text-white transition-colors">Blog</a>
-             <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
-       </div>
-        {/* buttons */}
-        <div className=' flex items-center gap-4'>
-          <Button className='text-sm text-white font-medium hover:text-slate-300 transition-colors cursor-pointer' text="Login" showIcon={false} />
-          <Button className='text-sm bg-white/10 hover:bg-white/20 text-white border border-white/10 font-medium py-2 px-5 rounded-full transition-all cursor-pointer backdrop-blur-md shadow-sm"' text="Sign Up" showIcon={false} />
-        </div>
-       </nav>
-   );
+
+const Navbar = () => {
+  return (
+    <nav className="w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex justify-between items-center bg-transparent text-white mix-blend-difference select-none">
+      {/* Brand Identity / Platform Callout */}
+      <div className="flex items-center gap-2 cursor-pointer group">
+        <span className="text-xs font-mono tracking-[0.4em] uppercase font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+          DHH // FABFIVE
+        </span>
+      </div>
+
+      {/* Structural Right Menu Anchor Links */}
+      <div className="flex items-center gap-8 text-xs font-mono tracking-widest text-white/60">
+        <a 
+          href="#platform-intro" 
+          className="hover:text-white transition-colors uppercase hidden sm:block"
+        >
+          [ ARCHIVE ]
+        </a>
+        <a 
+          href="https://indigo-laboratory.it" 
+          target="_blank" 
+          rel="noreferrer"
+          className="px-3 py-1.5 border border-white/10 rounded-full hover:border-white/40 hover:text-white transition-all uppercase text-[10px]"
+        >
+          INSPIRATION // LAB
+        </a>
+      </div>
+    </nav>
+  );
 };
 
-export default Navbar
+export default Navbar;

@@ -1,28 +1,26 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import LeftContent from '../features/hero/LeftContent';
-import RightGraphics from '../features/hero/RightGraphics';
+import EditorialHero from '../features/hero/EditorialHero'; // Injected: Your new video interaction hub
+import ArtistGrid from '../features/artists/ArtistGrid'; // Updated path: Pointing to your production folder
 
 const Home = () => {
   return (
-    // {/* Base Structural Viewport Canvas */}
-    <div className="relative min-h-screen w-full overflow-hidden bg-linear-to-br from-slate-950 via-purple-950 to-neutral-950 flex flex-col justify-between">
+    /* Base Structural Viewport Canvas - Standardized to a unified dark theme */
+    <div className="relative min-h-screen w-full bg-slate-950 text-white flex flex-col justify-between overflow-hidden selection:bg-amber-400/30">
       
-      {/* Ambient Mesh Glow Effects using Tailwind v4 custom values */}
-      <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-amber-200/10 blur-[130px] pointer-events-none" />
-      <div className="absolute top-[20%] right-[-5%] w-[55vw] h-[55vw] rounded-full bg-purple-600/15 blur-[150px] pointer-events-none" />
-
-      {/* Main Orchestration Node */}
-      <div className="relative z-10 flex flex-col flex-1">
+      {/* Floating Header Interface Overlay - Absolutely positioned to glide smoothly over the video */}
+      <div className="absolute top-0 left-0 w-full z-50">
         <Navbar />
-
-        <main className="flex-1 max-w-7xl w-full mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-8 lg:py-0">
-          <LeftContent />
-          <RightGraphics />
-        </main>
       </div>
 
+      {/* INTERACTIVE EDITORIAL HERO CANVAS (Handles your local intro video loop & artist hovers) */}
+      <EditorialHero />
+
+      {/* FEATURE CORES SHOWCASE (The modular, asymmetric scroll rows section) */}
+      <ArtistGrid />
+
+      {/* SYSTEM BOUNDARY FOOTER */}
       <Footer />
     </div>
   );
