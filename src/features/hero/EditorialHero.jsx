@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { dhhArtists } from '../../data/DhhData'; // Pulls your clean variables directly
-import introVideo from '../../assets/video/intro.mp4'; // Loads your local video file loop
+import introVideo from '../../assets/video/sample.mp4'; // Loads your local video file loop
 
 const EditorialHero = () => {
   // Tracking state variable. null = default background video playing loop
